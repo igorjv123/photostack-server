@@ -1,0 +1,46 @@
+<h1>Welcome on the Start Page)</h1>
+
+<h1><a id="Users_8"></a>Users</h1>
+<ul>
+<li>GET <code>api/users</code> - повертає всіх користувачів</li>
+<li>GET <code>api/users/:id</code> - повертає користувача з даним id</li>
+<li>DELETE <code>api/users/:id</code> - видаляє користувача з даним id</li>
+<li>POST <code>api/users</code> - додає користувача. Приклад body:</li>
+</ul>
+<pre><code>    {
+        &quot;name&quot;: &quot;Duke&quot;,
+        &quot;email&quot;: &quot;duke@crud.com&quot;,
+        &quot;phone&quot;: &quot;2222-320&quot;
+    }
+</code></pre>
+<ul>
+<li>PUT <code>api/users/:id</code> - оновлює користувача з даним id. Приклад body:<pre><code>{
+     &quot;name&quot;: &quot;Robin&quot;,
+     &quot;email&quot;: &quot;robin@crud.com&quot;,
+     &quot;phone&quot;: &quot;2222-320&quot;
+ }
+</code></pre>
+</li>
+</ul>
+<h1><a id="Messages_29"></a>Messages</h1>
+<ul>
+<li>GET <code>api/messages</code> - повертає всі повідомлення</li>
+<li>GET <code>api/messages/:id</code> - повертає повідомлення з даним id</li>
+<li>DELETE <code>api/messages/:id</code> - видаляє повідомлення з даним id</li>
+<li>POST <code>api/messages</code> - додає повідомлення. Приклад body:</li>
+</ul>
+<pre><code>    {
+        &quot;senderId&quot;: &quot;5b48b2f6a414dc7d56656b6a&quot;,
+        &quot;receiverId&quot;: &quot;5b48c417c0a3430733d24974&quot;,
+        &quot;text&quot;: &quot;Hello, how are you?&quot;
+    }
+</code></pre>
+<ul>
+<li>PUT <code>api/messages/:id</code> - оновлює повідомлення з даним id. Приклад body:<pre><code>{
+     &quot;senderId&quot;: &quot;5b48b2f6a414dc7d56656b6a&quot;,
+     &quot;receiverId&quot;: &quot;5b48c417c0a3430733d24974&quot;,
+     &quot;text&quot;: &quot;Hi, how are you?&quot;
+ }
+</code></pre>
+</li>
+</ul>
