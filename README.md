@@ -1,4 +1,4 @@
-# Запуск
+# Start
 
 - `npm install`
 - mongod should running at `localhost:27017`
@@ -6,4 +6,4 @@
 
 Server running at `localhost:3001`
 # Having trouble starting?
-Try `node index`
+If you haven't installed `nodemon` use `node index` for start
