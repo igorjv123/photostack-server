@@ -49,7 +49,7 @@ router.put('/:id', function(req, res){
     }
     res.sendStatus(200);
   })
-});﻿
+});
 
 router.delete('/:id', function(req, res){
   Messages.deleteMessage(req.params.id, function(err, result){

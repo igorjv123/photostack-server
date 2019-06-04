@@ -7,7 +7,6 @@ const ObjectID = require('mongodb').ObjectID;
 router.get('/',function(req,res){
   const page = Number(req.query.page)
   const amount = Number(req.query.amount)
-   
     Images.allImages(page, amount, function(err, docs){
       if(err){
         console.log(err);
@@ -71,11 +70,21 @@ router.delete('/:id', function(req, res){
 })
 
 router.post('/filters', function(req, res){
-  console.log(req.body)
-  const page = Number(req.query.page)
-  const amount = Number(req.query.amount)
-  console.log(req.body)
-  if(req.body){
+  const page = parseInt(req.query.page)
+  const amount = parseInt(req.query.amount)
+  const userId = req.query.userId?req.query.userId:null
+  console.log(req.query)
+  
+  if(userId && req.body){
+    Images.filteredImagesByUserId(page, amount, req.body, userId,function(err, docs){
+      if(err){
+        console.log(err);
+        return res.sendStatus(500);
+      }
+      res.send(docs);
+      })
+    }
+  else if(req.body){
     Images.filteredImages(page, amount, req.body, function(err, docs){
       
       if(err){

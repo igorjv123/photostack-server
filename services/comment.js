@@ -13,8 +13,8 @@ exports.findCommentByImageId = function(ID, cb){
   })
 }
 
-exports.createComment = function(image, cb){
-    db.get().collection('comments').insert(image, (err, result)=>{
+exports.createComment = function(comment, cb){
+    db.get().collection('comments').insert(comment, (err, result)=>{
     cb(err, result);
   });
 }
